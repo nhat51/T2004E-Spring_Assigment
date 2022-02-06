@@ -24,6 +24,14 @@ const routes = [
                 meta: {
                     title: 'Add Streets',
                 }
+            },
+            {
+                path: 'detail/:id',
+                component: () => import('./detail'),
+                name: 'Streets',
+                meta: {
+                    title: 'Add Streets',
+                }
             }
         ]
     }

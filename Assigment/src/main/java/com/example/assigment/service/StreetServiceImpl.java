@@ -5,6 +5,7 @@ import com.example.assigment.repository.StreetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -42,6 +43,7 @@ public class StreetServiceImpl implements StreetService{
 
     @Override
     public Street create(Street street) {
+        street.setCreated_at(LocalDate.now());
         return streetRepository.save(street);
     }
 

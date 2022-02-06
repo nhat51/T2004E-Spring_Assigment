@@ -1,7 +1,7 @@
 <template>
   <div>
     <a-card>
-      <div>
+<!--      <div>
         <a-form class="product__search-form">
           <a-form-item>
             <a-input-search placeholder="Search by name">
@@ -22,9 +22,9 @@
         <a-button type="primary" html-type="submit" style="margin-left: 20px">
           Reset
         </a-button>
-      </div>
+      </div>-->
       <div style="padding-bottom: 20px; padding-top: 20px">
-        <router-link to="/products/create">
+        <router-link to="/streets/add">
           <a-button type="primary" icon="plus">
             Add Street
           </a-button>
@@ -35,14 +35,8 @@
           <span slot="district" slot-scope="text">
             <p>{{ text.name }}</p>
          </span>
-          <div slot="action" >
-            <a class="button">
-              <a-icon type="delete"/>
-            </a> |
-            <a class="button">
-              <a-icon type="edit"/>
-            </a> |
-            <a class="button">
+          <div slot="action" slot-scope="text">
+            <a class="button" :href="'/streets/detail/'+ text.id ">
               <a-icon type="info-circle"/>
             </a>
           </div>

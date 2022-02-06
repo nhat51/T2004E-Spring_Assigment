@@ -1,15 +1,18 @@
 import axios from "axios";
 
-const URL_PRODUCTS = "http://localhost:8080/api/v1/streets";
+const URL_STREETS = "http://localhost:8080/api/v1/streets";
 
 class StreetService {
     getAll(params){
-        return axios.get(URL_PRODUCTS,{
+        return axios.get(URL_STREETS,{
             params: params,
         });
     }
     addStreet(body){
-        return axios.post(URL_PRODUCTS,body);
+        return axios.post(URL_STREETS,body);
+    }
+    detail(id){
+        return axios.get(URL_STREETS + "/" + id)
     }
 
 }

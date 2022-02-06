@@ -7,7 +7,7 @@
       <a-input v-model="form.description"/>
     </a-form-item>
     <a-form-item label="District">
-      <a-select v-model="form.districtId">
+      <a-select v-model="form.district_id">
         <a-select-option v-for="item in data" :key="item.id" :value="item.id">
           {{item.name}}
         </a-select-option>
@@ -45,7 +45,7 @@ export default {
       data:[],
       form:{
         name: undefined,
-        districtId: undefined,
+        district_id: undefined,
         description: undefined,
         status: undefined,
       }
@@ -66,7 +66,8 @@ export default {
     },
     handleSubmit(){
       StreetService.addStreet(this.form).then(
-          this.$router.push("/streets/list")
+          this.$router.push("/streets/list"),
+          StreetService.getAll()
       ).catch(error => {
         console.log(error)
       })
