@@ -30,7 +30,6 @@ const routes = [
                 component: () => import('./detail'),
                 name: 'Streets',
                 meta: {
-                    title: 'Add Streets',
                 }
             }
         ]

@@ -42,16 +42,16 @@ public class LoadData implements CommandLineRunner {
     }
     private void loadStreet(){
         if (streetRepository.count() == 0){
-            Street street1 = new Street("Street 1", LocalDate.now(),"Street 1", StreetStatus.USING,1);
-            Street street2 = new Street("Street 2", LocalDate.now(),"Street 2", StreetStatus.UNDER_CONSTRUCTION,1);
-            Street street3 = new Street("Street 3", LocalDate.now(),"Street 3", StreetStatus.FIX,2);
-            Street street4 = new Street("Street 4", LocalDate.now(),"Street 4", StreetStatus.USING,2);
-            Street street5 = new Street("Street 5", LocalDate.now(),"Street 5", StreetStatus.UNDER_CONSTRUCTION,3);
-            Street street6 = new Street("Street 6", LocalDate.now(),"Street 6", StreetStatus.FIX,3);
-            Street street7 = new Street("Street 7", LocalDate.now(),"Street 7", StreetStatus.USING,4);
-            Street street8 = new Street("Street 8", LocalDate.now(),"Street 8", StreetStatus.USING,4);
-            Street street9 = new Street("Street 9", LocalDate.now(),"Street 9", StreetStatus.USING,5);
-            Street street10 = new Street("Street 10", LocalDate.now(),"Street 10", StreetStatus.USING,5);
+            Street street1 = new Street("Trần Thủ Độ", LocalDate.now(),"Trần Thủ Độ", StreetStatus.USING,1);
+            Street street2 = new Street("Hoàng Mai", LocalDate.now(),"Hoàng Mai", StreetStatus.UNDER_CONSTRUCTION,1);
+            Street street3 = new Street("Tạ Hiện", LocalDate.now(),"Tạ Hiện", StreetStatus.FIX,2);
+            Street street4 = new Street("Hoàng Hoa Thám", LocalDate.now(),"Hoàng Hoa Thám", StreetStatus.USING,2);
+            Street street5 = new Street("Trần Đại Nghĩa", LocalDate.now(),"Trần Đại Nghĩa", StreetStatus.UNDER_CONSTRUCTION,3);
+            Street street6 = new Street("Trần Hưng Đạo", LocalDate.now(),"Trần Hưng Đạo", StreetStatus.FIX,3);
+            Street street7 = new Street("Lê Thánh Tông", LocalDate.now(),"Lê Thánh Tông", StreetStatus.USING,4);
+            Street street8 = new Street("Võ Thị Sáu", LocalDate.now(),"Võ Thị Sáu", StreetStatus.USING,4);
+            Street street9 = new Street("Nguyễn An Ninh", LocalDate.now(),"Nguyễn An Ninh", StreetStatus.USING,5);
+            Street street10 = new Street("Trần Nhật Duật", LocalDate.now(),"Trần Nhật Duật", StreetStatus.USING,5);
             streetRepository.save(street1);
             streetRepository.save(street2);
             streetRepository.save(street3);
